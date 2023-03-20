@@ -177,14 +177,6 @@ test(
 )
 
 test(
-    'Cannot delete same-value elements from empty list',
-    () => {
-        const list = new DoublyLinkedList()
-        expect(list.deleteAll.bind(list, '42')).toThrow('Trying to delete from empty list')
-    }
-)
-
-test(
     'Can delete same-value elements from non-empty list',
     () => {
         const list = new DoublyLinkedList()

@@ -81,7 +81,7 @@ class DoublyLinkedList {
     }
 
     deleteAll(value) {
-        if (!this.head) throw new Error('Trying to delete from empty list')
+        if (!this.head) return
         if (typeof (value) != 'string' || value.length !== 1) return
         let currentNode = this.head
         for (let i = 0; i < this.length(); i++) {
