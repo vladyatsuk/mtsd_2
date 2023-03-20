@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vladyatsuk/mtsd_2/issues"
   },
-  "homepage": "https://github.com/vladyatsuk/mtsd_2#readme"
+  "homepage": "https://github.com/vladyatsuk/mtsd_2#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }
