@@ -1,0 +1,19 @@
+{
+  "name": "mtsd_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "list.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladyatsuk/mtsd_2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladyatsuk/mtsd_2/issues"
+  },
+  "homepage": "https://github.com/vladyatsuk/mtsd_2#readme"
+}
