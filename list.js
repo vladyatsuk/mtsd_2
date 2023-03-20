@@ -33,7 +33,8 @@ class DoublyLinkedList {
     }
 
     insert(value, index) {
-        if (typeof (value) != 'string' || value.length !== 1 || typeof (index) != 'number' || index < 0 || index > this.length()) throw new Error('Invalid value or index')
+        if (typeof (value) != 'string' || value.length !== 1) throw new Error('Invalid value')
+        if (typeof (index) != 'number' || index < 0 || index > this.length()) throw new Error('Invalid index')
         const node = new ListNode(value)
         if (index === 0) {
             if (!this.head) {
@@ -61,8 +62,8 @@ class DoublyLinkedList {
     }
 
     delete(index) {
-        if (typeof (index) != 'number' || index < 0 || index > this.length()) throw new Error('Invalid index of the value to delete')
         if (!this.head) throw new Error('Trying to delete from empty list')
+        if (typeof (index) != 'number' || index < 0 || index > this.length() - 1) throw new Error('Invalid index of the value to delete')
         let currentNode = this.head
         if (index === 0) {
             this.head = this.head.next
@@ -80,8 +81,8 @@ class DoublyLinkedList {
     }
 
     deleteAll(value) {
-        if (typeof (value) !== 'string') throw new Error('Invalid value to delete')
         if (!this.head) throw new Error('Trying to delete from empty list')
+        if (typeof (value) != 'string' || value.length !== 1) return
         let currentNode = this.head
         for (let i = 0; i < this.length(); i++) {
             if (currentNode.value === value) {
@@ -93,7 +94,7 @@ class DoublyLinkedList {
     }
 
     get(index) {
-        if (typeof (index) != 'number' || index < 0 || index > this.length()) throw new Error('Invalid index')
+        if (typeof (index) != 'number' || index < 0 || index > this.length() - 1) throw new Error('Invalid index')
         let currentNode = this.head
         for (let i = 0; i < index; i++) currentNode = currentNode.next
         return currentNode.value
