@@ -149,9 +149,17 @@ class DoublyLinkedList {
     extend(list) {
         const newList = new DoublyLinkedList();
         for (let i = 0; i < list.length(); i++) newList.append(list.get(i));
-        this.tail.next = newList.head;
-        newList.head.prev = this.tail;
-        this.tail = newList.tail;
+        if (!newList.head) {
+            return;
+        }
+        if (!this.head) {
+            this.head = newList.head;
+            this.tail = newList.tail;
+        } else {
+            this.tail.next = newList.head;
+            newList.head.prev = this.tail;
+            this.tail = newList.tail;
+        }
     }
 
 }
