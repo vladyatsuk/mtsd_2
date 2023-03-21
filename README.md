@@ -40,6 +40,11 @@ npm install
 ```
 npm test
 ```
+
+Also you can open or run `examples.js` file to look how methods of the lists work:
+```
+node examples.js
+```
 ## Link to the failed CI tests commit
 
 [Link](https://github.com/vladyatsuk/mtsd_2/commit/f23d922544d1fa2676dec50df839e7d5496cdb54)
